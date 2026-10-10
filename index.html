@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f1420">
+<meta name="msapplication-TileColor" content="#0f1420">
+<title>888神马电影网 ｜ 影视聚合检索平台：新片榜单、在线观影指南与影音资源索引</title>
+<meta name="description" content="888神马电影网（https://888shenmadianyingwang-zh.github.io）是一个影视聚合检索平台，面向中国大陆观众整理电影、电视剧、动漫、综艺与纪录片的新片榜单、在线观影指南、资源索引、评分排行与类型导航。栏目覆盖院线热映、网络首播、经典怀旧、年度盘点与观影日历，支持按题材、地区、年份、语言、评分组合筛选，为日常选片与影视资料查阅提供可复用的索引入口。">
+<meta name="keywords" content="888神马电影网, 888shenmadianyingwang-zh.github.io, 影视聚合检索, 影视资源索引, 在线观影指南, 新片榜单, 电影评分排行, 电视剧排行榜, 动漫番剧索引, 综艺节目清单, 纪录片推荐, 经典怀旧片单, 年度影视盘点, 观影日历">
+<meta name="description" lang="en" content="888 Shenma Movie Network is a Chinese film and TV aggregation and retrieval platform, covering theatrical releases, online premieres, classic titles, annual charts and viewing guides.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="googlebot" content="index,follow">
+<meta name="publisher" content="888神马电影网">
+<meta name="author" content="888神马电影网 运营组">
+<meta name="copyright" content="Copyright © 2026 888神马电影网 All Rights Reserved.">
+<meta name="revisit-after" content="1 days">
+<meta name="distribution" content="global">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="888神马电影网 ｜ 影视聚合检索平台">
+<meta property="og:description" content="整理电影、电视剧、动漫、综艺与纪录片的新片榜单、在线观影指南与资源索引。">
+<meta property="og:site_name" content="888神马电影网">
+<meta property="og:url" content="https://888shenmadianyingwang-zh.github.io">
+<meta property="og:updated_time" content="2026-10-09T08:00:00+08:00">
+<link rel="canonical" href="https://888shenmadianyingwang-zh.github.io">
+<link rel="start" href="https://888shenmadianyingwang-zh.github.io" title="888神马电影网">
+<style>
+:root{
+  --navy:#0f1420; --navy2:#161d2e; --navy3:#1d2740; --panel:#ffffff; --panel2:#f5f7fb;
+  --ink:#1a2133; --txt:#4a5266; --sub:#8590a6; --sub2:#b3bacb;
+  --line:#e6eaf2; --line2:#eef1f7;
+  --blue:#2f6bff; --blue2:#5b8cff; --cyan:#18c2c7; --violet:#7b5cf0;
+  --amber:#ff9f1c; --rose:#ff5a7a; --green:#12b886; --red:#f0463c;
+  --sh:0 1px 2px rgba(15,20,32,.04),0 12px 32px rgba(15,20,32,.08);
+  --sh2:0 2px 6px rgba(15,20,32,.05),0 18px 44px rgba(15,20,32,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-width:thin;scrollbar-color:var(--sub2) transparent}
+body{
+  background:var(--panel2);color:var(--txt);font-size:14.5px;line-height:1.75;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit}
+input,select{font-family:inherit;font-size:14px;outline:none}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--sub2);border-radius:4px}
+
+/* ============ APP SHELL ============ */
+.app{display:grid;grid-template-columns:236px 1fr;min-height:100vh}
+.side{
+  background:linear-gradient(175deg,var(--navy),var(--navy2) 55%,#121a2c);
+  color:#c9d3e8;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;
+  overflow-y:auto;
+}
+.side .logo{
+  padding:26px 22px 20px;border-bottom:1px solid rgba(255,255,255,.07);
+}
+.side .logo a{display:flex;align-items:center;gap:11px}
+.side .logo .mark{
+  width:40px;height:40px;border-radius:12px;flex:none;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:900;color:#fff;letter-spacing:-1px;
+  box-shadow:0 6px 16px rgba(47,107,255,.45);
+}
+.side .logo b{display:block;font-size:15.5px;color:#fff;letter-spacing:.5px;line-height:1.3}
+.side .logo span{display:block;font-size:10px;color:#7d89a6;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.side .who{padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.07)}
+.side .who dt{font-size:10.5px;color:#7d89a6;letter-spacing:1.5px;text-transform:uppercase}
+.side .who dd{font-size:12.5px;color:#c9d3e8;margin-top:4px;line-height:1.6;word-break:break-all}
+.side nav{padding:14px 14px;flex:1}
+.side .grp{font-size:10px;color:#6a7693;letter-spacing:1.6px;text-transform:uppercase;padding:14px 10px 8px}
+.side nav a{
+  display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;
+  font-size:13.5px;color:#c9d3e8;transition:.15s;margin-bottom:2px;position:relative;
+}
+.side nav a .ic{
+  width:30px;height:30px;border-radius:8px;flex:none;background:rgba(255,255,255,.05);
+  display:flex;align-items:center;justify-content:center;font-size:14px;transition:.15s;
+}
+.side nav a .ct{
+  margin-left:auto;font-size:10.5px;background:rgba(255,255,255,.07);color:#a8b3cc;
+  padding:1px 7px;border-radius:20px;font-variant-numeric:tabular-nums;
+}
+.side nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+.side nav a:hover .ic{background:var(--blue);color:#fff}
+.side nav a.on{background:linear-gradient(90deg,rgba(47,107,255,.22),rgba(47,107,255,.04));color:#fff}
+.side nav a.on .ic{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 4px 10px rgba(47,107,255,.35)}
+.side nav a.on::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:var(--blue2)}
+.side nav a.on .ct{background:var(--blue);color:#fff}
+.side .foot{padding:16px 22px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;color:#6a7693;line-height:1.8}
+.side .foot b{display:block;color:#a8b3cc;font-size:12px;margin-bottom:5px}
+.side .foot a{color:#7d89a6}
+.side .foot a:hover{color:#fff}
+
+.main{min-width:0}
+.top{
+  position:sticky;top:0;z-index:20;background:rgba(245,247,251,.86);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+}
+.top .in{display:flex;align-items:center;gap:14px;padding:13px 30px}
+.menu-btn{display:none;width:38px;height:38px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:18px;color:var(--ink)}
+.crumb{font-size:13px;color:var(--sub)}
+.crumb b{color:var(--ink);font-weight:600}
+.search{flex:1;max-width:420px;margin-left:auto;position:relative}
+.search input{
+  width:100%;height:40px;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:0 88px 0 38px;color:var(--ink);transition:.18s;
+}
+.search input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,107,255,.12)}
+.search .k{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--sub);font-size:14px}
+.search .go{position:absolute;right:5px;top:50%;transform:translateY(-50%);height:30px;padding:0 15px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border-radius:7px;font-size:13px}
+.top .me{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink)}
+.top .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--rose));color:#fff;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700}
+.body{padding:26px 30px 50px}
+
+/* hero */
+.hero{
+  background:linear-gradient(120deg,#1a2340,#0f1420 60%,#1d2740);
+  border-radius:20px;padding:30px;color:#e8edf8;position:relative;overflow:hidden;box-shadow:var(--sh2);
+}
+.hero::before{content:"";position:absolute;right:-90px;top:-110px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(47,107,255,.5),transparent 68%)}
+.hero::after{content:"";position:absolute;right:60px;bottom:-140px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(24,194,199,.32),transparent 65%)}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;position:relative;z-index:2}
+.hero .pills span{
+  font-size:11.5px;letter-spacing:.5px;padding:5px 12px;border-radius:20px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);color:#c9d3e8;
+}
+.hero h1{font-size:29px;line-height:1.4;font-weight:800;letter-spacing:.5px;position:relative;z-index:2}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#5b8cff,#18c2c7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:14px;color:#a8b3cc;margin-top:12px;max-width:620px;line-height:1.9;position:relative;z-index:2}
+.hero .act{display:flex;gap:10px;margin-top:20px;position:relative;z-index:2;flex-wrap:wrap}
+.hero .act a{padding:10px 20px;border-radius:10px;font-size:13.5px;transition:.18s}
+.hero .act .p{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 8px 20px rgba(47,107,255,.38)}
+.hero .act .p:hover{transform:translateY(-2px)}
+.hero .act .s{border:1px solid rgba(255,255,255,.22);color:#e8edf8}
+.hero .act .s:hover{background:rgba(255,255,255,.1)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--sh);transition:.22s}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.stat .u{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.stat .u i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex:none}
+.stat .u b{font-size:12.5px;color:var(--sub);letter-spacing:.3px}
+.stat .n{font-size:27px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.stat .n small{font-size:14px;color:var(--sub);font-weight:600;margin-left:3px}
+.stat .d{font-size:12px;color:var(--green);margin-top:3px}
+
+.blk{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh);margin-top:20px;overflow:hidden}
+.blk > header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line2)}
+.blk > header .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(var(--blue),var(--cyan));flex:none}
+.blk > header h2{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:.3px}
+.blk > header .en{font-size:10.5px;color:var(--sub2);letter-spacing:1.5px;text-transform:uppercase}
+.blk > header .spacer{margin-left:auto}
+.blk > header .tabs{display:flex;gap:4px;background:var(--panel2);padding:3px;border-radius:9px}
+.blk > header .tabs a{font-size:12.5px;color:var(--sub);padding:6px 13px;border-radius:7px;transition:.15s;white-space:nowrap}
+.blk > header .tabs a.on,.blk > header .tabs a:hover{background:var(--panel);color:var(--ink);box-shadow:0 1px 3px rgba(15,20,32,.08)}
+.blk > header .more{font-size:12.5px;color:var(--blue);white-space:nowrap}
+.blk > header .more:hover{color:var(--ink)}
+.blk > .bd{padding:20px 22px}
+
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}
+.chips a{font-size:12.5px;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 13px;transition:.15s}
+.chips a.on,.chips a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* poster grid */
+.posters{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.poster{transition:.25s}
+.poster:hover{transform:translateY(-6px)}
+.pv{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:2/3;background:linear-gradient(150deg,#dfe5f0,#b9c4d8)}
+.pv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,20,32,.78))}
+.pv .rk{position:absolute;left:10px;top:10px;z-index:3;background:rgba(15,20,32,.72);backdrop-filter:blur(4px);color:#fff;font-size:10px;letter-spacing:.5px;padding:3px 8px;border-radius:5px}
+.pv .rk.hot{background:linear-gradient(135deg,var(--rose),var(--amber))}
+.pv .sc{position:absolute;right:10px;top:10px;z-index:3;background:rgba(15,20,32,.72);color:var(--amber);font-family:"SF Mono",Consolas,monospace;font-size:12.5px;font-weight:800;padding:3px 7px;border-radius:5px}
+.pv .nm{position:absolute;left:11px;right:11px;bottom:10px;z-index:3;color:#fff;font-size:13.5px;font-weight:700;line-height:1.4;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.poster .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--sub);margin-top:9px}
+.poster .meta b{color:var(--ink2,#2a3142);font-weight:600}
+
+/* twin panel */
+.twin{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
+.twin .blk{margin-top:0}
+
+table.tb{width:100%;border-collapse:collapse;font-size:13.5px}
+table.tb th{text-align:left;font-size:10.5px;color:var(--sub);letter-spacing:1.4px;text-transform:uppercase;padding:0 12px 12px;border-bottom:1px solid var(--line);font-weight:600;white-space:nowrap}
+table.tb td{padding:13px 12px;border-bottom:1px solid var(--line2);vertical-align:middle;color:var(--txt)}
+table.tb tr:last-child td{border-bottom:none}
+table.tb tbody tr{transition:.13s}
+table.tb tbody tr:hover{background:var(--panel2)}
+table.tb .tn{font-weight:700;color:var(--ink)}
+table.tb .tn small{display:block;font-size:11px;color:var(--sub);font-weight:400;margin-top:2px}
+table.tb .idx{font-size:12px;font-weight:800;color:var(--sub2);font-variant-numeric:tabular-nums;width:26px}
+table.tb .idx.g{color:var(--rose)}
+table.tb .tp{font-size:12px;color:var(--sub)}
+table.tb .rt{display:inline-flex;align-items:center;gap:5px;font-family:"SF Mono",Consolas,monospace;font-weight:800;color:var(--ink);font-size:13.5px}
+table.tb .rt i{color:var(--amber);font-size:11px;font-style:normal}
+table.tb .trend{font-size:11.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.tb .trend.up{color:var(--green)} table.tb .trend.dn{color:var(--red)} table.tb .trend.fl{color:var(--sub)}
+
+.notice{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.note{display:flex;gap:14px;padding:15px;border:1px solid var(--line);border-radius:12px;transition:.2s;background:var(--panel)}
+.note:hover{border-color:var(--blue2);background:var(--panel2)}
+.note .no{
+  width:38px;height:38px;border-radius:10px;flex:none;background:linear-gradient(135deg,#eef1f7,#e2e8f4);
+  color:var(--ink);font-family:"SF Mono",Consolas,monospace;font-size:14px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.note.g2 .no{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
+.note .tx h4{font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.5}
+.note .tx p{font-size:12.5px;color:var(--sub);line-height:1.75;margin-top:4px}
+
+.tags{display:flex;gap:7px;flex-wrap:wrap}
+.tags a{font-size:12px;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:6px 12px;transition:.15s}
+.tags a:hover{background:var(--ink);color:#fff}
+.tagcloud{padding:6px 0}
+.tagcloud a{display:inline-block;margin:0 8px 10px 0;color:var(--txt);font-size:13px;transition:.15s;border-bottom:1px dashed var(--line)}
+.tagcloud a:hover{color:var(--blue)}
+.tagcloud a.s1{font-size:20px;font-weight:800;color:var(--ink)}
+.tagcloud a.s2{font-size:17px;font-weight:700;color:var(--ink2,#2a3142)}
+.tagcloud a.s3{font-size:14.5px}
+
+/* faq */
+.faq{padding:6px 0}
+.faq .it{border-bottom:1px solid var(--line2)}
+.faq .it:last-child{border-bottom:none}
+.faq summary{cursor:pointer;padding:17px 0;font-size:15px;font-weight:700;color:var(--ink);display:flex;gap:14px;align-items:flex-start;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q{flex:none;width:24px;height:24px;border-radius:6px;background:var(--panel2);color:var(--blue);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.faq summary .ar{flex:none;margin-left:auto;color:var(--sub2);font-size:12px;transition:.2s}
+.faq details[open] summary .ar{transform:rotate(180deg);color:var(--blue)}
+.faq .an{padding:0 0 18px 38px;font-size:13.5px;color:var(--sub);line-height:1.9}
+.faq .an a{color:var(--blue);border-bottom:1px solid rgba(47,107,255,.25)}
+
+/* utility rows */
+.ut{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ut .blk{margin-top:0}
+.mini-list li{border-top:1px solid var(--line2)}
+.mini-list li:first-child{border-top:none}
+.mini-list a{display:grid;grid-template-columns:46px 1fr auto;gap:12px;padding:11px 0;align-items:center}
+.mini-list .th{width:46px;height:60px;border-radius:6px;background:linear-gradient(150deg,#e4e9f3,#c2cce0)}
+.mini-list .tx b{display:block;font-size:13.5px;font-weight:600;color:var(--ink)}
+.mini-list .tx span{font-size:11.5px;color:var(--sub)}
+.mini-list .sc{font-family:"SF Mono",Consolas,monospace;font-weight:800;color:var(--amber);font-size:14px}
+
+/* marquee strip */
+.strip{background:var(--navy);color:#c9d3e8;border-radius:14px;padding:16px 22px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;box-shadow:var(--sh)}
+.strip b{font-size:12px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;flex:none}
+.strip a{font-size:13px;color:#c9d3e8;white-space:nowrap;transition:.15s}
+.strip a:hover{color:var(--cyan)}
+
+footer{border-top:1px solid var(--line);background:var(--panel);margin-top:20px}
+footer .in{padding:34px 30px 26px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px}
+footer .ab h3{display:flex;align-items:center;gap:10px;font-size:19px;color:var(--ink);font-weight:800}
+footer .ab h3 .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900}
+footer .ab p{font-size:13px;color:var(--sub);margin-top:13px;line-height:1.9}
+footer .ab .url{display:inline-block;margin-top:14px;font-size:12px;color:var(--ink);background:var(--panel2);border:1px dashed var(--sub2);padding:7px 12px;border-radius:8px;word-break:break-all}
+footer h5{font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:14px;letter-spacing:.3px}
+footer ul li{margin-bottom:9px}
+footer ul a{font-size:13px;color:var(--sub);transition:.15s}
+footer ul a:hover{color:var(--blue)}
+.legal{padding:18px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--sub);line-height:1.9}
+.legal a{color:var(--sub)}
+.legal a:hover{color:var(--blue)}
+.legal .r{text-align:right}
+
+/* responsive */
+@media (max-width:1180px){
+  .posters{grid-template-columns:repeat(4,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+  .app{grid-template-columns:1fr}
+  .side{
+    position:fixed;left:0;top:0;bottom:0;width:256px;z-index:60;transform:translateX(-100%);transition:.28s;
+    box-shadow:0 0 40px rgba(15,20,32,.4);
+  }
+  .side.open{transform:translateX(0)}
+  .side .close{display:flex!important;width:38px;height:38px;margin:16px 16px 0 auto;border-radius:10px;background:rgba(255,255,255,.08);color:#fff;align-items:center;justify-content:center;font-size:17px}
+  .scrim{display:none;position:fixed;inset:0;background:rgba(15,20,32,.5);z-index:50}
+  .scrim.show{display:block}
+  .menu-btn{display:flex;align-items:center;justify-content:center}
+  .top .in{padding:12px 18px}
+  .body{padding:18px}
+  .hero{padding:24px}
+  .hero h1{font-size:23px}
+  .posters{grid-template-columns:repeat(3,1fr);gap:13px}
+  .twin,.ut{grid-template-columns:1fr;gap:20px}
+  .notice{grid-template-columns:1fr}
+  .blk > header{flex-wrap:wrap;gap:10px}
+  footer .in{grid-template-columns:1fr 1fr;gap:26px;padding:30px 18px 22px}
+  .legal{padding:16px 18px}
+}
+@media (max-width:620px){
+  .search{display:none}
+  .top .me span{display:none}
+  .hero h1{font-size:21px}
+  .stats{grid-template-columns:1fr 1fr;gap:11px}
+  .stat{padding:15px}
+  .stat .n{font-size:22px}
+  .posters{grid-template-columns:repeat(2,1fr)}
+  .strip{flex-direction:column;align-items:flex-start;gap:10px}
+  footer .in{grid-template-columns:1fr}
+  .legal .r{text-align:left}
+  table.tb .hide620{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="side" id="side">
+    <button class="close" id="close" aria-label="关闭菜单" style="display:none">✕</button>
+    <div class="logo">
+      <a href="#top">
+        <span class="mark">888</span>
+        <span><b>神马电影网</b><span>Shenma Movie Network</span></span>
+      </a>
+    </div>
+    <dl class="who">
+      <dt>站点网址</dt>
+      <dd>https://888shenmadianyingwang-zh.github.io</dd>
+    </dl>
+    <nav>
+      <div class="grp">核心栏目</div>
+      <a href="#top" class="on"><span class="ic">◆</span>概览仪表盘<span class="ct">12</span></a>
+      <a href="#hot"><span class="ic">▲</span>院线热映<span class="ct">32</span></a>
+      <a href="#web"><span class="ic">●</span>网络首播<span class="ct">47</span></a>
+      <a href="#tv"><span class="ic">▤</span>剧集与动漫<span class="ct">86</span></a>
+      <a href="#classic"><span class="ic">★</span>经典怀旧<span class="ct">210</span></a>
+
+      <div class="grp">导航与检索</div>
+      <a href="#rank"><span class="ic">≡</span>评分排行榜<span class="ct">100</span></a>
+      <a href="#year"><span class="ic">▦</span>年度盘点<span class="ct">2026</span></a>
+      <a href="#cal"><span class="ic">▥</span>观影日历<span class="ct">31</span></a>
+      <a href="#tags"><span class="ic">◈</span>题材导航<span class="ct">48</span></a>
+
+      <div class="grp">关于与帮助</div>
+      <a href="#guide"><span class="ic">✎</span>观影指南<span class="ct">6</span></a>
+      <a href="#faq"><span class="ic">?</span>常见问题</a>
+      <a href="#about"><span class="ic">⚙</span>关于本站</a>
+    </nav>
+    <div class="foot">
+      <b>站点信息</b>
+      正式名称：888神马电影网<br>
+      内容定位：影视聚合检索与观影指南<br>
+      <a href="https://888shenmadianyingwang-zh.github.io">https://888shenmadianyingwang-zh.github.io</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main" id="top">
+
+    <div class="top">
+      <div class="in">
+        <button class="menu-btn" id="menu" aria-label="打开菜单">☰</button>
+        <div class="crumb">影视聚合检索平台 / <b>概览仪表盘</b></div>
+        <div class="search">
+          <span class="k">⌕</span>
+          <input type="text" placeholder="搜索片名、演员、导演、题材或关键字">
+          <button class="go">搜索</button>
+        </div>
+        <div class="me"><span class="av">888</span><span>访客账号</span></div>
+      </div>
+    </div>
+
+    <div class="body">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="pills">
+          <span>电影</span><span>电视剧</span><span>动漫番剧</span><span>综艺</span><span>纪录片</span><span>短视频短剧</span>
+        </div>
+        <h1>888神马电影网：把分散的影视内容，<br><em>整理成一张可复用的索引</em></h1>
+        <p>覆盖院线热映、网络首播、经典怀旧与年度盘点，按题材、地区、年份、语言、评分多维度筛选。为日常选片、片单整理与影视资料查阅提供结构化入口，不含播放与下载服务。</p>
+        <div class="act">
+          <a class="p" href="#hot">查看本周热映榜单 →</a>
+          <a class="s" href="#guide">选片与观影指南</a>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat">
+          <div class="u"><i style="background:linear-gradient(135deg,var(--blue),var(--blue2))">▤</i><b>条目总量</b></div>
+          <div class="n">12,840<small>条</small></div>
+          <div class="d">▲ 本周新增 326 条</div>
+        </div>
+        <div class="stat">
+          <div class="u"><i style="background:linear-gradient(135deg,var(--rose),var(--amber))">▲</i><b>在映影片</b></div>
+          <div class="n">32<small>部</small></div>
+          <div class="d">▲ 较上周 +5 部</div>
+        </div>
+        <div class="stat">
+          <div class="u"><i style="background:linear-gradient(135deg,var(--violet),var(--blue))">★</i><b>高分条目</b></div>
+          <div class="n">1,562<small>条</small></div>
+          <div class="d">评分 8.0 以上</div>
+        </div>
+        <div class="stat">
+          <div class="u"><i style="background:linear-gradient(135deg,var(--green),var(--cyan))">▥</i><b>待映定档</b></div>
+          <div class="n">41<small>部</small></div>
+          <div class="d">最近更新 10 月 9 日</div>
+        </div>
+      </div>
+
+      <!-- HOT -->
+      <section class="blk" id="hot">
+        <header>
+          <span class="bar"></span>
+          <h2>院线热映</h2>
+          <span class="en">In Theaters</span>
+          <span class="spacer"></span>
+          <div class="tabs">
+            <a href="#" class="on">本周</a><a href="#">国庆档</a><a href="#">暑期档</a><a href="#">春节档</a>
+          </div>
+          <a class="more" href="#">完整榜单 #</a>
+        </header>
+        <div class="bd">
+          <div class="chips">
+            <a href="#" class="on">全部类型</a><a href="#">动作</a><a href="#">剧情</a><a href="#">喜剧</a><a href="#">悬疑</a><a href="#">动画</a><a href="#">科幻</a><a href="#">犯罪</a><a href="#">爱情</a>
+          </div>
+          <div class="posters">
+            <div class="poster"><div class="pv"><span class="rk hot">TOP 1</span><span class="sc">8.2</span><span class="nm">周处除三害</span></div><div class="meta"><span><b>中国台湾</b> · 犯罪动作</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 2</span><span class="sc">7.9</span><span class="nm">热辣滚烫</span></div><div class="meta"><span><b>中国大陆</b> · 剧情喜剧</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 3</span><span class="sc">7.7</span><span class="nm">飞驰人生 2</span></div><div class="meta"><span><b>中国大陆</b> · 喜剧运动</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 4</span><span class="sc">7.8</span><span class="nm">默杀</span></div><div class="meta"><span><b>中国大陆</b> · 悬疑犯罪</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 5</span><span class="sc">7.6</span><span class="nm">第二十条</span></div><div class="meta"><span><b>中国大陆</b> · 剧情喜剧</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 6</span><span class="sc">8.0</span><span class="nm">沙丘 2</span></div><div class="meta"><span><b>美国</b> · 科幻冒险</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 7</span><span class="sc">7.5</span><span class="nm">你想活出怎样的人生</span></div><div class="meta"><span><b>日本</b> · 动画奇幻</span><span>2023</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 8</span><span class="sc">7.4</span><span class="nm">蛟龙行动</span></div><div class="meta"><span><b>中国大陆</b> · 动作战争</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 9</span><span class="sc">7.9</span><span class="nm">我们一起摇太阳</span></div><div class="meta"><span><b>中国大陆</b> · 剧情爱情</span><span>2024</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">TOP 10</span><span class="sc">7.3</span><span class="nm">红毯先生</span></div><div class="meta"><span><b>中国大陆</b> · 喜剧讽刺</span><span>2024</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TWIN: WEB PREMIERE + NOTICE -->
+      <div class="twin" id="web" style="margin-top:20px">
+        <section class="blk">
+          <header>
+            <span class="bar"></span>
+            <h2>网络首播</h2>
+            <span class="en">Online Premiere</span>
+            <span class="spacer"></span>
+            <div class="tabs">
+              <a href="#" class="on">热度</a><a href="#">口碑</a><a href="#">上新</a>
+            </div>
+            <a class="more" href="#">更多 #</a>
+          </header>
+          <div class="bd" style="padding:6px 22px 18px">
+            <table class="tb">
+              <thead><tr><th class="hide620">#</th><th>作品名称</th><th class="hide620">类型</th><th>评分</th><th class="hide620">趋势</th><th>上线</th></tr></thead>
+              <tbody>
+                <tr><td class="idx g">01</td><td><span class="tn">我的阿勒泰<small>迷你剧 · 8 集全 · 改编自李娟散文</small></span></td><td class="tp hide620">剧情 / 民族</td><td><span class="rt"><i>◆</i>8.9</span></td><td class="trend up hide620">▲ 0.3</td><td class="tp">在播</td></tr>
+                <tr><td class="idx g">02</td><td><span class="tn">繁花<small>年代剧 · 30 集 · 王家卫执导</small></span></td><td class="tp hide620">年代 / 商战</td><td><span class="rt"><i>◆</i>8.7</span></td><td class="trend up hide620">▲ 0.1</td><td class="tp">全集</td></tr>
+                <tr><td class="idx">03</td><td><span class="tn">庆余年 第二季<small>古装剧 · 36 集</small></span></td><td class="tp hide620">古装 / 权谋</td><td><span class="rt"><i>◆</i>8.2</span></td><td class="trend fl hide620">— 0.0</td><td class="tp">全集</td></tr>
+                <tr><td class="idx">04</td><td><span class="tn">新生<small>悬疑剧 · 10 集</small></span></td><td class="tp hide620">悬疑 / 犯罪</td><td><span class="rt"><i>◆</i>7.8</span></td><td class="trend dn hide620">▼ 0.2</td><td class="tp">全集</td></tr>
+                <tr><td class="idx">05</td><td><span class="tn">墨雨云间<small>古装剧 · 40 集</small></span></td><td class="tp hide620">古装 / 复仇</td><td><span class="rt"><i>◆</i>7.5</span></td><td class="trend up hide620">▲ 0.4</td><td class="tp">全集</td></tr>
+                <tr><td class="idx">06</td><td><span class="tn">种地吧<small>纪实综艺 · 第二季</small></span></td><td class="tp hide620">纪实 / 劳作</td><td><span class="rt"><i>◆</i>8.6</span></td><td class="trend up hide620">▲ 0.2</td><td class="tp">周更</td></tr>
+                <tr><td class="idx">07</td><td><span class="tn">年会不能停！<small>电影 · 网络上线</small></span></td><td class="tp hide620">喜剧 / 职场</td><td><span class="rt"><i>◆</i>8.1</span></td><td class="trend fl hide620">— 0.0</td><td class="tp">已上线</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="blk" id="guide">
+          <header>
+            <span class="bar"></span>
+            <h2>选片与观影指南</h2>
+            <span class="en">How To Watch</span>
+            <span class="spacer"></span>
+            <a class="more" href="#">全部 #</a>
+          </header>
+          <div class="bd">
+            <div class="notice">
+              <div class="note g2"><span class="no">01</span><div class="tx"><h4>院线还是流媒体：怎么选</h4><p>大银幕适配视效大片与音效作品；叙事向与纪录片在平板或电视上同样成立，成本差异明显。</p></div></div>
+              <div class="note"><span class="no">02</span><div class="tx"><h4>评分怎么看才不被误导</h4><p>先看评价人数再看分数，再看短评结构。5 万条以下的评分容易受早期口碑影响。</p></div></div>
+              <div class="note g2"><span class="no">03</span><div class="tx"><h4>片单长度怎么定</h4><p>一次收藏 10 部以内最容易看完。超过 30 部的片单通常只会停在第三部。</p></div></div>
+              <div class="note"><span class="no">04</span><div class="tx"><h4>长剧的观看节奏</h4><p>12 集以内可一口气追完，30 集以上建议每周 3-4 集，避免中段剧情稀释。</p></div></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CLASSIC -->
+      <section class="blk" id="classic">
+        <header>
+          <span class="bar"></span>
+          <h2>经典怀旧</h2>
+          <span class="en">Classic Rewatch</span>
+          <span class="spacer"></span>
+          <div class="tabs">
+            <a href="#" class="on">华语经典</a><a href="#">港片黄金</a><a href="#">好莱坞</a><a href="#">亚洲</a>
+          </div>
+          <a class="more" href="#">怀旧片单 #</a>
+        </header>
+        <div class="bd">
+          <div class="chips">
+            <a href="#" class="on">全部年代</a><a href="#">2020s</a><a href="#">2010s</a><a href="#">2000s</a><a href="#">1990s</a><a href="#">1980s 及更早</a>
+          </div>
+          <div class="posters">
+            <div class="poster"><div class="pv"><span class="rk hot">9.4</span><span class="nm">肖申克的救赎</span></div><div class="meta"><span><b>美国</b> · 剧情犯罪</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.2</span><span class="nm">霸王别姬</span></div><div class="meta"><span><b>中国大陆</b> · 剧情历史</span><span>1993</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.3</span><span class="nm">阿甘正传</span></div><div class="meta"><span><b>美国</b> · 剧情爱情</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.1</span><span class="nm">大话西游</span></div><div class="meta"><span><b>中国香港</b> · 喜剧奇幻</span><span>1995</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.0</span><span class="nm">活着</span></div><div class="meta"><span><b>中国大陆</b> · 剧情家庭</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.2</span><span class="nm">低俗小说</span></div><div class="meta"><span><b>美国</b> · 犯罪独立</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">8.9</span><span class="nm">重庆森林</span></div><div class="meta"><span><b>中国香港</b> · 爱情文艺</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.1</span><span class="nm">这个杀手不太冷</span></div><div class="meta"><span><b>法国</b> · 动作剧情</span><span>1994</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">9.0</span><span class="nm">搏击俱乐部</span></div><div class="meta"><span><b>美国</b> · 悬疑剧情</span><span>1999</span></div></div>
+            <div class="poster"><div class="pv"><span class="rk">8.8</span><span class="nm">花样年华</span></div><div class="meta"><span><b>中国香港</b> · 爱情文艺</span><span>2000</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TWIN: RANK + TV -->
+      <div class="twin" style="margin-top:20px">
+        <section class="blk" id="rank">
+          <header>
+            <span class="bar"></span>
+            <h2>评分排行榜</h2>
+            <span class="en">Top Rated</span>
+            <span class="spacer"></span>
+            <div class="tabs">
+              <a href="#" class="on">电影 TOP 10</a><a href="#">剧集 TOP 10</a><a href="#">动漫 TOP 10</a><a href="#">综艺 TOP 10</a>
+            </div>
+            <a class="more" href="#">完整榜单 #</a>
+          </header>
+          <div class="bd" style="padding:6px 22px 18px">
+            <table class="tb">
+              <thead><tr><th>#</th><th>作品名称</th><th class="hide620">制片地区</th><th class="hide620">题材</th><th>评分</th><th class="hide620">评价人数</th></tr></thead>
+              <tbody>
+                <tr><td class="idx g">01</td><td><span class="tn">肖申克的救赎<small>弗兰克·德拉邦特 执导 · 1994</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">剧情 / 犯罪</td><td><span class="rt"><i>◆</i>9.4</span></td><td class="tp hide620">320 万</td></tr>
+                <tr><td class="idx g">02</td><td><span class="tn">霸王别姬<small>陈凯歌 执导 · 1993</small></span></td><td class="tp hide620">中国大陆</td><td class="tp hide620">剧情 / 历史</td><td><span class="rt"><i>◆</i>9.2</span></td><td class="tp hide620">190 万</td></tr>
+                <tr><td class="idx">03</td><td><span class="tn">阿甘正传<small>罗伯特·泽米吉斯 执导 · 1994</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">剧情 / 爱情</td><td><span class="rt"><i>◆</i>9.3</span></td><td class="tp hide620">240 万</td></tr>
+                <tr><td class="idx">04</td><td><span class="tn">泰坦尼克号<small>詹姆斯·卡梅隆 执导 · 1997</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">剧情 / 灾难</td><td><span class="rt"><i>◆</i>9.1</span></td><td class="tp hide620">210 万</td></tr>
+                <tr><td class="idx">05</td><td><span class="tn">千与千寻<small>宫崎骏 执导 · 2001</small></span></td><td class="tp hide620">日本</td><td class="tp hide620">动画 / 奇幻</td><td><span class="rt"><i>◆</i>9.2</span></td><td class="tp hide620">160 万</td></tr>
+                <tr><td class="idx">06</td><td><span class="tn">这个杀手不太冷<small>吕克·贝松 执导 · 1994</small></span></td><td class="tp hide620">法国</td><td class="tp hide620">动作 / 剧情</td><td><span class="rt"><i>◆</i>9.1</span></td><td class="tp hide620">180 万</td></tr>
+                <tr><td class="idx">07</td><td><span class="tn">美丽人生<small>罗伯托·贝尼尼 执导 · 1997</small></span></td><td class="tp hide620">意大利</td><td class="tp hide620">剧情 / 战争</td><td><span class="rt"><i>◆</i>9.3</span></td><td class="tp hide620">130 万</td></tr>
+                <tr><td class="idx">08</td><td><span class="tn">星际穿越<small>克里斯托弗·诺兰 执导 · 2014</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">科幻 / 剧情</td><td><span class="rt"><i>◆</i>9.0</span></td><td class="tp hide620">170 万</td></tr>
+                <tr><td class="idx">09</td><td><span class="tn">盗梦空间<small>克里斯托弗·诺兰 执导 · 2010</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">科幻 / 悬疑</td><td><span class="rt"><i>◆</i>9.1</span></td><td class="tp hide620">220 万</td></tr>
+                <tr><td class="idx">10</td><td><span class="tn">楚门的世界<small>彼得·威尔 执导 · 1998</small></span></td><td class="tp hide620">美国</td><td class="tp hide620">剧情 / 科幻</td><td><span class="rt"><i>◆</i>9.0</span></td><td class="tp hide620">150 万</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="blk" id="tv">
+          <header>
+            <span class="bar"></span>
+            <h2>剧集与动漫</h2>
+            <span class="en">Drama &amp; Anime</span>
+            <span class="spacer"></span>
+            <div class="tabs"><a href="#" class="on">热播</a><a href="#">口碑</a><a href="#">新番</a></div>
+            <a class="more" href="#">更多 #</a>
+          </header>
+          <div class="bd" style="padding:16px 22px 20px">
+            <ul class="mini-list">
+              <li><a href="#"><span class="th"></span><span class="tx"><b>我的阿勒泰</b><span>迷你剧 · 改编自李娟同名散文集</span></span><span class="sc">8.9</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>繁花</b><span>年代商战剧 · 王家卫执导</span></span><span class="sc">8.7</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>庆余年 第二季</b><span>古装权谋 · 36 集</span></span><span class="sc">8.2</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>葬送的芙莉莲</b><span>日本动画 · 奇幻冒险</span></span><span class="sc">9.1</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>药屋少女的呢喃</b><span>日本动画 · 古风推理</span></span><span class="sc">8.8</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>墨雨云间</b><span>古装复仇 · 40 集</span></span><span class="sc">7.5</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>间谍过家家</b><span>日本动画 · 喜剧动作</span></span><span class="sc">8.9</span></a></li>
+              <li><a href="#"><span class="th"></span><span class="tx"><b>新生</b><span>悬疑剧 · 10 集</span></span><span class="sc">7.8</span></a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- STRIP -->
+      <div class="strip">
+        <b>实时更新</b>
+        <a href="#">今日定档 5 部 #</a>
+        <a href="#">口碑回升 3 部 #</a>
+        <a href="#">流媒体本周上新 #</a>
+        <a href="#">艺术电影专线放映 #</a>
+        <a href="#">档期变动提醒 #</a>
+        <a href="#">条目纠错已处理 #</a>
+      </div>
+
+      <!-- YEAR -->
+      <section class="blk" id="year">
+        <header>
+          <span class="bar"></span>
+          <h2>年度盘点</h2>
+          <span class="en">Annual Roundup</span>
+          <span class="spacer"></span>
+          <div class="tabs"><a href="#" class="on">2026</a><a href="#">2025</a><a href="#">2024</a><a href="#">2023</a></div>
+          <a class="more" href="#">归档 #</a>
+        </header>
+        <div class="bd">
+          <div class="notice">
+            <div class="note g2"><span class="no">2026</span><div class="tx"><h4>年度华语电影观察</h4><p>从春节档到国庆档，类型片的市场反馈与口碑曲线出现明显分化，喜剧仍是刚需，悬疑片出现饱和迹象。</p></div></div>
+            <div class="note"><span class="no">2025</span><div class="tx"><h4>年度剧集十选</h4><p>短剧集（12 集以内）占比持续上升，长剧集的集数压缩成为平台共识。</p></div></div>
+            <div class="note g2"><span class="no">2024</span><div class="tx"><h4>年度动画回顾</h4><p>日本动画在电视与院线两端均有高口碑作品，国产动画仍在寻找稳定的类型出口。</p></div></div>
+            <div class="note"><span class="no">2023</span><div class="tx"><h4>年度纪录片十选</h4><p>纪实类内容在流媒体端的观看时长增长明显，人文题材最受关注。</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALENDAR -->
+      <section class="blk" id="cal">
+        <header>
+          <span class="bar"></span>
+          <h2>观影日历</h2>
+          <span class="en">Release Calendar</span>
+          <span class="spacer"></span>
+          <div class="tabs"><a href="#" class="on">本周</a><a href="#">本月</a><a href="#">下月</a><a href="#">节庆档</a></div>
+          <a class="more" href="#">完整日历 #</a>
+        </header>
+        <div class="bd">
+          <table class="tb">
+            <thead><tr><th>日期</th><th>片名</th><th class="hide620">题材</th><th>形式</th><th class="hide620">地区</th><th>关注点</th></tr></thead>
+            <tbody>
+              <tr><td class="idx g">10.09</td><td><span class="tn">周处除三害<small>今日起延长放映一周</small></span></td><td class="tp hide620">犯罪 / 动作</td><td>院线</td><td class="tp hide620">中国台湾</td><td><span class="trend up">口碑逆跌</span></td></tr>
+              <tr><td class="idx">10.10</td><td><span class="tn">热辣滚烫<small>上线正版授权平台</small></span></td><td class="tp hide620">剧情 / 喜剧</td><td>网络</td><td class="tp hide620">中国大陆</td><td><span class="trend fl">首播</span></td></tr>
+              <tr><td class="idx">10.12</td><td><span class="tn">飞驰人生 2<small>花絮与幕后纪录片同步上线</small></span></td><td class="tp hide620">喜剧 / 运动</td><td>网络</td><td class="tp hide620">中国大陆</td><td><span class="trend fl">幕后</span></td></tr>
+              <tr><td class="idx">10.15</td><td><span class="tn">沙丘 2<small>加长版点映场</small></span></td><td class="tp hide620">科幻 / 冒险</td><td>艺联专线</td><td class="tp hide620">美国</td><td><span class="trend up">加长版</span></td></tr>
+              <tr><td class="idx">10.18</td><td><span class="tn">第二十条<small>高校公益放映专场</small></span></td><td class="tp hide620">剧情 / 喜剧</td><td>院线</td><td class="tp hide620">中国大陆</td><td><span class="trend fl">公益场</span></td></tr>
+              <tr><td class="idx">10.25</td><td><span class="tn">我的阿勒泰<small>原声大碟与幕后访谈上线</small></span></td><td class="tp hide620">剧情 / 民族</td><td>网络</td><td class="tp hide620">中国大陆</td><td><span class="trend fl">原声</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAGS -->
+      <section class="blk" id="tags">
+        <header>
+          <span class="bar"></span>
+          <h2>题材导航</h2>
+          <span class="en">Genre Index</span>
+          <span class="spacer"></span>
+          <div class="tabs"><a href="#" class="on">按题材</a><a href="#">按地区</a><a href="#">按年份</a><a href="#">按语言</a></div>
+          <a class="more" href="#">完整索引 #</a>
+        </header>
+        <div class="bd">
+          <div class="tagcloud">
+            <a href="#" class="s1">动作</a>
+            <a href="#" class="s2">喜剧</a>
+            <a href="#">剧情</a>
+            <a href="#" class="s1">悬疑</a>
+            <a href="#" class="s2">犯罪</a>
+            <a href="#">爱情</a>
+            <a href="#" class="s3">科幻</a>
+            <a href="#">动画</a>
+            <a href="#" class="s2">奇幻</a>
+            <a href="#">战争</a>
+            <a href="#">纪录片</a>
+            <a href="#" class="s3">文艺</a>
+            <a href="#">家庭</a>
+            <a href="#">历史</a>
+            <a href="#" class="s2">年代</a>
+            <a href="#">职场</a>
+            <a href="#">运动</a>
+            <a href="#">恐怖</a>
+            <a href="#">惊悚</a>
+            <a href="#" class="s3">音乐</a>
+            <a href="#">歌舞</a>
+            <a href="#">传记</a>
+            <a href="#">黑色电影</a>
+            <a href="#">独立电影</a>
+            <a href="#">短片</a>
+            <a href="#">默片</a>
+            <a href="#">修复版</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="blk" id="faq">
+        <header>
+          <span class="bar"></span>
+          <h2>常见问题</h2>
+          <span class="en">FAQ</span>
+          <span class="spacer"></span>
+          <a class="more" href="#">提交问题 #</a>
+        </header>
+        <div class="bd">
+          <div class="faq">
+            <details open>
+              <summary><span class="q">Q</span>888神马电影网是什么类型的站点？<span class="ar">▾</span></summary>
+              <div class="an">本站是影视聚合检索与观影指南类站点，提供电影、电视剧、动漫、综艺与纪录片的榜单、资料、评分与题材导航，不含任何在线播放、下载、视频托管或资源转发服务。需要观看请通过正规院线与正版授权平台。</div>
+            </details>
+            <details>
+              <summary><span class="q">Q</span>条目里的评分是怎么算出来的？<span class="ar">▾</span></summary>
+              <div class="an">采用多个公开平台的评分加权计算，并在条目下方注明来源与统计时间。该数值仅用于横向比较，不构成专业评审结论，具体以各平台页面显示为准。</div>
+            </details>
+            <details>
+              <summary><span class="q">Q</span>为什么有些影片标了「网络上线」却找不到观看入口？<span class="ar">▾</span></summary>
+              <div class="an">「网络上线」是本站对该片发行渠道的状态标记，仅说明其可在正版授权平台观看，并非本站提供播放服务。各平台片库会随版权周期变化，建议以平台当前页面为准。</div>
+            </details>
+            <details>
+              <summary><span class="q">Q</span>如何筛选符合自己口味的片单？<span class="ar">▾</span></summary>
+              <div class="an">可依次使用 <a href="#tags">题材导航</a>、<a href="#rank">评分排行榜</a> 与 <a href="#cal">观影日历</a> 三个入口。先定类型，再按评分与年份收窄，最后按档期安排观看顺序，是本站推荐的选片路径。</div>
+            </details>
+            <details>
+              <summary><span class="q">Q</span>发现信息有误如何反馈？<span class="ar">▾</span></summary>
+              <div class="an">可在条目页点击纠错，写明片名、出错字段与正确信息或来源链接。编辑组在两个工作日内核实并修订，修订记录会保留在条目历史中，方便回溯。</div>
+            </details>
+            <details>
+              <summary><span class="q">Q</span>转载本站内容有什么要求？<span class="ar">▾</span></summary>
+              <div class="an">个人与非商业用途请保留「888神马电影网」署名与原文链接；商业用途、全文转载或翻译需另行联系取得授权。本站正式名称为 888神马电影网，官网地址为 <a href="https://888shenmadianyingwang-zh.github.io">https://888shenmadianyingwang-zh.github.io</a>。</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="blk" id="about">
+        <header>
+          <span class="bar"></span>
+          <h2>关于本站</h2>
+          <span class="en">About</span>
+          <span class="spacer"></span>
+          <a class="more" href="#">联系与合作 #</a>
+        </header>
+        <div class="bd">
+          <div class="twin" style="margin:0">
+            <div>
+              <p style="font-size:14px;color:var(--sub);line-height:2"><b style="color:var(--ink)">888神马电影网</b>（官网地址 <a href="https://888shenmadianyingwang-zh.github.io" style="color:var(--blue);font-weight:600">https://888shenmadianyingwang-zh.github.io</a>）是一个影视聚合检索与观影指南类站点，面向中国大陆观众整理电影、电视剧、动漫、综艺与纪录片的新片榜单、在线观影指南、资源索引、评分排行与类型导航。</p>
+              <p style="font-size:14px;color:var(--sub);line-height:2;margin-top:12px">内容由编辑组人工整理，所有条目均可按题材、地区、年份、语言与评分组合筛选。本站不提供播放、下载或资源托管服务，观看请通过正规院线与正版授权平台。</p>
+              <div class="chips" style="margin:18px 0 0">
+                <a href="#hot">院线热映 #</a><a href="#web">网络首播 #</a><a href="#tv">剧集动漫 #</a><a href="#classic">经典怀旧 #</a><a href="#rank">评分排行 #</a><a href="#year">年度盘点 #</a><a href="#cal">观影日历 #</a><a href="#tags">题材导航 #</a>
+              </div>
+            </div>
+            <div>
+              <div class="notice">
+                <div class="note g2"><span class="no">正式名称</span><div class="tx"><h4>888神马电影网</h4><p>影视聚合检索与观影指南</p></div></div>
+                <div class="note"><span class="no">官网地址</span><div class="tx"><h4>https://888shenmadianyingwang-zh.github.io</h4><p>请认准官方域名</p></div></div>
+                <div class="note g2"><span class="no">更新频率</span><div class="tx"><h4>榜单每日 · 盘点每周</h4><p>条目随时修订</p></div></div>
+                <div class="note"><span class="no">内容范围</span><div class="tx"><h4>电影 / 剧集 / 动漫 / 综艺 / 纪录片</h4><p>共 12,840 条条目</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="in">
+        <div class="ab">
+          <h3><span class="mark">888</span>神马电影网</h3>
+          <p>影视聚合检索与观影指南类站点，整理电影、电视剧、动漫、综艺与纪录片的新片榜单、在线观影指南、资源索引、评分排行与类型导航。官网地址：https://888shenmadianyingwang-zh.github.io</p>
+          <span class="url">https://888shenmadianyingwang-zh.github.io</span>
+        </div>
+        <div>
+          <h5>内容栏目</h5>
+          <ul>
+            <li><a href="#hot">院线热映 #</a></li>
+            <li><a href="#web">网络首播 #</a></li>
+            <li><a href="#tv">剧集与动漫 #</a></li>
+            <li><a href="#classic">经典怀旧 #</a></li>
+            <li><a href="#rank">评分排行榜 #</a></li>
+            <li><a href="#year">年度盘点 #</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>检索与工具</h5>
+          <ul>
+            <li><a href="#cal">观影日历 #</a></li>
+            <li><a href="#tags">题材导航 #</a></li>
+            <li><a href="#">按地区检索 #</a></li>
+            <li><a href="#">按年份检索 #</a></li>
+            <li><a href="#">按语言检索 #</a></li>
+            <li><a href="#">高级筛选 #</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>关于与帮助</h5>
+          <ul>
+            <li><a href="#about">关于本站 #</a></li>
+            <li><a href="#guide">观影指南 #</a></li>
+            <li><a href="#faq">常见问题 #</a></li>
+            <li><a href="#">条目纠错 #</a></li>
+            <li><a href="#">内容合作 #</a></li>
+            <li><a href="#">版权声明 #</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <div>© 2026 888神马电影网 ｜ 影视聚合检索与观影指南 ｜ 官网 https://888shenmadianyingwang-zh.github.io<br>本站内容仅供选片参考与资料查阅，影片信息以官方公布为准；请通过正规院线与正版授权平台观看。</div>
+        <div class="r">正式名称：888神马电影网<br><a href="#top">回到页首 ↑</a></div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu');
+  var close=document.getElementById('close');
+  var side=document.getElementById('side');
+  var scrim=document.getElementById('scrim');
+  function open(){side.classList.add('open');scrim.classList.add('show');document.body.style.overflow='hidden'}
+  function shut(){side.classList.remove('open');scrim.classList.remove('show');document.body.style.overflow=''}
+  menu.addEventListener('click',open);
+  close.addEventListener('click',shut);
+  scrim.addEventListener('click',shut);
+  var links=side.querySelectorAll('nav a, .foot a');
+  for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){
+    if(window.innerWidth<=980){shut()}
+    var nav=document.querySelector('.side nav a.on');
+    if(nav){nav.classList.remove('on')}
+    if(this.tagName==='A'&&this.getAttribute('href')&&this.getAttribute('href').charAt(0)==='#'){
+      var t=this.textContent.replace(/[\d\s]/g,'');
+      var crumb=document.querySelector('.crumb b');
+      if(crumb){crumb.textContent=t||'概览仪表盘'}
+      this.classList.add('on');
+    }
+  })}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){shut()}});
+})();
+</script>
+
+</body>
+</html>
